@@ -1,6 +1,6 @@
 # psi-care
 psi-care
 
-Landing page desenvolvida em HTML, SCSS, e JavaScript.
+Landing responsiva page desenvolvida em HTML, SCSS, e JavaScript.
 
-DEMO - https://jao3.github.io/psi-care/
+#DEMO - https://jao3.github.io/psi-care/
