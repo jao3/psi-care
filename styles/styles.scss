@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&family=Roboto:wght@100;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    //text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+$primary:#2797ba;
+$text-base:#001a3e;
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+$black: #444;
+$white: #fff;
+$orange: #ff7f00; 
+$border: 1rem solid $primary;
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+}
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $text-base;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $primary;
+    }
+}
+section {
+    padding: 5rem 10%;
+}
+.titulo{
+    @include titleText(3rem);
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    border-left: 1rem solid $primary;
+}
+
+
+.header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background: $primary;
+    box-shadow: $box-shadow;
+    padding: 2rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    
+    .logo {
+        margin-right: auto;
+        width: 6rem;
+        height: 6rem;  
+    }
+    .navbar {
+        position: relative;
+        #close-navbar{
+            position: absolute;
+            top: 1.5rem; right: 2rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $white;
+            display: none;
+            &:hover{
+                transform: rotate(90deg);
+            }
+        }
+        a{
+            margin-right: 2rem;
+            @include titleText(2rem);
+            color: $white;
+    
+            &:hover{
+                @include titleText(2.1rem);
+                color: $text-base;
+            }
+        }
+    }
+
+    .icons div{
+        cursor: pointer;
+        font-size: 2.5rem;
+        color:$text-base;
+        &:hover{
+            color: $text-base;
+            
+        }
+    }
+    #menu-btn{
+        display: none;
+        color: $white;
+    }
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-color: $orange;
+    border: 1px solid $orange;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.7rem;
+    color: $orange;
+    box-shadow: $box-shadow;
+    display: inline-block;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: $orange;
+        color: $white;
+    }
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15rem;
+    .image {
+        flex: 1 1 40rem;
+        padding: 0 2.5rem;
+        
+        img{
+            width: 100%;
+        }
+    }
+    .content {
+        flex: 1 1 40rem ;
+        .text-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1{
+                @include titleText(2.2rem);
+                margin-right:1rem;
+            }
+            #icon{
+                @include titleText(2.5rem)
+            }
+            .text-top-icon {
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+        .text-desc {
+            h3{
+                @include titleText(3.5rem);
+                padding: 2rem 0;
+                text-transform: none
+            }
+            p{
+                @include graphText(1.6rem);
+                padding: 2rem 0;
+                text-transform: none;
+            }
+        }
+    }
+    
+}
+
+.diferencial{
+    width: 100%;
+    height: 10rem;
+    padding: 5rem 10%;
+    border-bottom: 2px solid $primary;
+
+.card-desc {
+    //position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    
+    background-color: $white;
+    border-radius: 2rem;
+    padding: 2rem 2rem 3rem;
+    border-left: 1rem solid $primary;
+    box-shadow: 1rem 2rem 1rem rgba(0,0,0,.1);
+    margin-top: -4.2%;
+    .card-title {
+        //width: 20%;
+        font-size: 1.7rem;
+    }
+    .cardlist{
+        
+        display: flex;
+        align-items: flex-start;
+        
+        .item-lista{
+            padding: 0 1.5rem;
+        i{
+            color: $primary;
+            font-size: 2.7rem;
+        }
+        h1{
+            font-size: 1.6rem;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
+    }
+}
+}
+
+
+
+
+.chamariz {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15rem;
+    margin-top: 5rem;
+    
+    .image{
+        flex: 1 1 40rem;
+        padding: 0 2.5rem;
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        flex: 1 1 40rem;
+        text-align: center;
+        h3{
+            @include titleText(2.4rem);
+            padding: 1.5rem 0;
+        }
+        p{
+            @include graphText(1.7rem);
+            padding: 1.5rem 0;
+        }
+    }
+    .btn{
+        width: 50%;
+    }
+}
+
+.servicos {
+    .box-container{
+        @include grid(25rem);
+        #box-img {
+            color: $primary;
+            font-size: 3.5rem;
+            padding-right: 1rem;
+        }
+        .box{
+            padding: 3rem;
+            border: 2px solid $primary;
+            box-shadow: $box-shadow;
+
+            &:hover{
+                transform: translateY(-1rem)
+            }
+
+            h3{
+                @include titleText(1.7rem);
+                padding: 2rem 0;
+            }
+            p{
+                @include graphText(1.4rem)
+            }
+        }
+    }
+}
+
+.depoimentos{
+    min-height: 100vh;
+    position: relative;
+.box-depoimento{
+        
+        .box{
+            width: 35rem;
+            height: 35rem;
+            border: 2px solid $primary;
+            padding: 3rem;
+            i{
+                position: absolute;
+                font-size: 5.2rem;
+                color: $primary;
+                right: 2rem;
+                bottom: 1.7rem;
+            }
+            h1{
+                padding: 2rem 0;
+                @include titleText(1.7rem);
+            }
+            p{
+                @include graphText(1.1rem);
+            }
+        }
+}
+}
+
+
+
+
+
+
+
+
+.footer{
+    background-color: $primary;
+    .box-container{
+        @include grid(25rem);
+        h3{
+            @include titleText(2.2rem);
+            color: $white;
+            padding: 1rem 0;
+        }
+        .share{
+            margin-top: 1rem;
+            a{
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4.5rem;
+                font-size: 1.7rem;
+                color: $white;
+                margin-right: 3rem;
+                text-align: center;
+
+                &:hover {
+                    font-size: 1.8rem;
+                    color: $text-base;
+                }
+            }
+        }
+        .link{
+            @include graphText(1.5rem);
+            color: $white;
+            padding: .5rem 0;
+            display: block;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        p{
+            @include graphText(1.5rem);
+            color: $white;
+            padding: 1rem 0;
+        }
+    }
+    .creditos{
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 3rem;
+        @include titleText(1.7rem);
+        color: $white;
+        border-top: 0.2rem solid $white;
+        span{
+            color: $text-base;
+        }
+    }
+}
+
+//media queries
+
+@media (max-width: 1200px){
+    .header {
+        padding: 2rem 5%;
+    }
+    section {
+        padding: 3rem 5%;
+        
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section {
+        padding: 3rem 2rem; 
+    }
+
+    .depoimentos{
+        
+        .box-depoimento{
+            .box{
+                p{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        #menu-btn{
+            display: inline-block;
+        }
+        .navbar{
+            position: fixed;
+            top: 0; right: -105%;
+            width: 30rem;
+            background: $primary;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            
+            #close-navbar{
+                display: block;
+            }
+
+            &.active{
+                box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+                right: 0;
+            }
+
+            a{
+                display: block;
+                margin: 1rem 0;
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+        
+    }
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .card-desc{
+        flex-direction: column;
+        .card-title{
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+    .chamariz{
+        gap: 0rem;
+        margin-top: 15rem;
+    }
+    
+    .swiper-button-prev::after {
+        display: none;       
+    }
+    .swiper-button-next::after {
+        display: none;       
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .chamariz{
+        gap: 0rem;
+        margin-top: 25rem;
+    }
+}
