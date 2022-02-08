@@ -14,14 +14,14 @@
     <!--Inicio Header-->
     <header class="header">
         
-        <img src="/assets/logo-psicare.png" alt="" class="logo">
+        <h1 class="logo">Psicare</h1>
         
         <nav class="navbar">
             <div id="close-navbar" class="fas fa-times"></div>
-            <a href="">Inicio</a>
-            <a href="">Sobre</a>
-            <a href="">Produtos</a>
-            <a href="">Depoimentos</a>
+            <a href="#home">Inicio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Produtos</a>
+            <a href="#depoimentos">Depoimentos</a>
         </nav>
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
@@ -29,7 +29,7 @@
     </header>
     <!--Inicio Fim-->
     <!--Inicio Hero section-->
-        <section class="home">
+        <section class="home" id="home">
             <div class="content">
                 <div class="text-top">
                     <div class="text-top-icon">
@@ -45,7 +45,7 @@
                     <h3>Feita por psicologas para psicologas</h3>
                     <p>controlar as finanças dos seus atendimentos nao precisa ser um evento demorado</p>
                 </div>
-                <button class="btn">Fale Conosco</button>
+                
             </div>
             <div class="image">
                 <img src="./assets/dash-escuro.png" alt="">
@@ -53,7 +53,7 @@
         </section>
     <!--Fim Hero section-->
     <!--Inicio Diferencial Section-->
-    <section class="diferencial">
+    <section class="diferencial" id="sobre">
         <div class="card-desc">
             <div class="card-title">
                 <p>O que somente a psi.Care pode te oferecer</p>
@@ -87,7 +87,7 @@
         <div class="content">
             <h3>Não deixe essa oportunidade passas</h3>
             <p>Garanta com desconto, de R$197,00 por APENAS</p>
-            <h3>R$67,00</h3>
+            <h3 class="preco">R$67,00</h3>
             <button class="btn">EU QUERO</button>
         </div>
 
@@ -95,7 +95,7 @@
     </section>
 <!--fim Chama section-->
 <!--Inicio por dentro section-->
-<section class="servicos">
+<section class="servicos" id="servicos">
     <h1 class="titulo">Por dentro da Psi.Care</h1>
     <div class="box-container">
         <div class="box">
@@ -131,8 +131,46 @@
     </div>
 </section>
 <!--fim por dentro section-->
+<!--Inicio Produtos section-->
+<section class="produtos">
+    <h1 class="titulo">Mas afinal, o que vou receber?</h1>
+    <div class="prod-titulo">
+        <h2>Vantagens e os BÔNUS que vai receber junto com a planilha PSI.CARE</h2>
+    </div>
+    <div class="box-produtos">
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+        <div class="prod-content">
+            <h2 class="fas fa-check"><h1>Usada e aprovada por 100+ psicologos(as)</h1></h2>
+        </div>
+    </div>
+    </div>
+</section>
+<!--fim Produtos section-->
 <!--Inicio Depoimento section-->
-    <section class="depoimentos">
+    <section class="depoimentos" id="depoimentos">
         <h1 class="titulo">Depoimentos</h1>
         <div class="swiper mySwiper box-depoimento">
             <div class="swiper-wrapper wrapper">
@@ -173,7 +211,20 @@
     </section>
 <!--Fim Depoimento section-->
 
-
+<!--Inicio  eu quero section-->
+    <section class="chama2">
+        <div class="chama2-img">
+            <img src="./assets/100-satisfacao.svg" alt="">
+        </div>
+        <div class="chama-content">
+            <div class="chama2-text">
+                <h1>De R$197,00 por APENAS</h1>
+                <h3>R$ 67,00</h3>
+                <button class="btn">EU QUERO</button>
+            </div>
+        </div>
+    </section>
+<!--Inicio  eu quero section-->
 
 
 
@@ -199,7 +250,7 @@
                 </div>
                 <div class="box">
                     <h3>Links rapidos</h3>
-                    <a href="" class="link">Serviços</a>
+                    <a href="#servicos" class="link">Serviços</a>
                     <a href="" class="link">Planos</a>
                     <a href="" class="link">Contato</a>
                 </div>

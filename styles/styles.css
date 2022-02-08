@@ -35,7 +35,6 @@ section {
 
 .titulo {
   font-size: 3rem;
-  text-transform: capitalize;
   color: #444;
   margin-bottom: 3rem;
   padding-left: 1rem;
@@ -66,8 +65,6 @@ section {
 
 .header .logo {
   margin-right: auto;
-  width: 6rem;
-  height: 6rem;
 }
 
 .header .navbar {
@@ -92,14 +89,12 @@ section {
 .header .navbar a {
   margin-right: 2rem;
   font-size: 2rem;
-  text-transform: capitalize;
   color: #444;
   color: #fff;
 }
 
 .header .navbar a:hover {
   font-size: 2.1rem;
-  text-transform: capitalize;
   color: #444;
   color: #001a3e;
 }
@@ -121,22 +116,23 @@ section {
 
 .btn {
   padding: 1rem 2rem;
-  border-color: #ff7f00;
-  border: 1px solid #ff7f00;
   cursor: pointer;
-  background-color: transparent;
+  background-color: red;
   font-size: 1.7rem;
-  color: #ff7f00;
+  color: #fff;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   display: inline-block;
+  border-radius: 2rem;
 }
 
 .btn:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: #ff7f00;
-  color: #fff;
+  background-color: transparent;
+  border-color: red;
+  border: 1px solid red;
+  color: red;
 }
 
 .home {
@@ -152,6 +148,8 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 15rem;
+  background: url(../assets/home-background.png) no-repeat;
+  background-size: 100vw 80vh;
 }
 
 .home .image {
@@ -185,14 +183,12 @@ section {
 
 .home .content .text-top h1 {
   font-size: 2.2rem;
-  text-transform: capitalize;
   color: #444;
   margin-right: 1rem;
 }
 
 .home .content .text-top #icon {
   font-size: 2.5rem;
-  text-transform: capitalize;
   color: #444;
 }
 
@@ -207,7 +203,6 @@ section {
 
 .home .content .text-desc h3 {
   font-size: 3.5rem;
-  text-transform: capitalize;
   color: #444;
   padding: 2rem 0;
   text-transform: none;
@@ -219,6 +214,10 @@ section {
   color: #001a3e;
   padding: 2rem 0;
   text-transform: none;
+}
+
+.home .content .btn {
+  width: 20rem;
 }
 
 .diferencial {
@@ -268,11 +267,13 @@ section {
 }
 
 .diferencial .card-desc .cardlist .item-lista h1 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  color: #444;
 }
 
 .diferencial .card-desc .cardlist .item-lista p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  color: #001a3e;
 }
 
 .chamariz {
@@ -308,7 +309,6 @@ section {
 
 .chamariz .content h3 {
   font-size: 2.4rem;
-  text-transform: capitalize;
   color: #444;
   padding: 1.5rem 0;
 }
@@ -318,6 +318,10 @@ section {
   line-height: 2;
   color: #001a3e;
   padding: 1.5rem 0;
+}
+
+.chamariz .content .preco {
+  font-size: 7rem;
 }
 
 .chamariz .btn {
@@ -352,7 +356,6 @@ section {
 
 .servicos .box-container .box h3 {
   font-size: 1.7rem;
-  text-transform: capitalize;
   color: #444;
   padding: 2rem 0;
 }
@@ -364,7 +367,6 @@ section {
 }
 
 .depoimentos {
-  min-height: 100vh;
   position: relative;
 }
 
@@ -386,7 +388,6 @@ section {
 .depoimentos .box-depoimento .box h1 {
   padding: 2rem 0;
   font-size: 1.7rem;
-  text-transform: capitalize;
   color: #444;
 }
 
@@ -394,6 +395,88 @@ section {
   font-size: 1.1rem;
   line-height: 2;
   color: #001a3e;
+}
+
+.produtos .prod-titulo {
+  font-size: 1.7rem;
+  color: #444;
+}
+
+.produtos .box-produtos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.produtos .box-produtos .prod-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.produtos .box-produtos .prod-content h2 {
+  font-size: 2.7rem;
+  padding-right: 1rem;
+  color: green;
+}
+
+.produtos .box-produtos .prod-content h1 {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #001a3e;
+}
+
+.chama2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15rem;
+  margin-top: 5rem;
+}
+
+.chama2 .chama2-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  padding: 0 2.5rem;
+}
+
+.chama2 .chama2-img img {
+  width: 100%;
+}
+
+.chama2 .chama-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+}
+
+.chama2 .chama-content h1 {
+  font-size: 2.4rem;
+  color: #444;
+  text-transform: none;
+}
+
+.chama2 .chama-content h3 {
+  font-size: 7rem;
+  color: #444;
+  padding-bottom: 2rem;
+}
+
+.chama2 .btn {
+  width: 70%;
 }
 
 .footer {
@@ -410,7 +493,6 @@ section {
 
 .footer .box-container h3 {
   font-size: 2.2rem;
-  text-transform: capitalize;
   color: #444;
   color: #fff;
   padding: 1rem 0;
@@ -461,7 +543,6 @@ section {
   margin-top: 3rem;
   padding-top: 3rem;
   font-size: 1.7rem;
-  text-transform: capitalize;
   color: #444;
   color: #fff;
   border-top: 0.2rem solid #fff;
@@ -565,6 +646,10 @@ section {
   }
   .swiper-button-next::after {
     display: none;
+  }
+  .chama2 {
+    gap: 5rem;
+    margin-top: 2rem;
   }
 }
 
