@@ -22,7 +22,7 @@ $border: 1rem solid $primary;
 
 @mixin grid($val) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    grid-template-columns: repeat(($val, 1fr));
     gap: 2rem;
 }
 @mixin titleText($titleSize) {
@@ -269,7 +269,7 @@ section {
 
 .servicos {
     .box-container{
-        @include grid(25rem);
+        @include grid(3);
         #box-img {
             color: $primary;
             font-size: 3.5rem;
@@ -328,7 +328,7 @@ section {
         @include titleText(1.7rem);
     }
     .box-produtos{
-        @include grid(35rem);
+        @include grid(2);
         padding-top: 4rem;
         .prod-content{
             display: flex;
@@ -443,6 +443,17 @@ section {
         padding: 3rem 5%;
         
     }
+    .servicos{
+        .box-container{
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+    }
+    .produtos{
+        .box-produtos{
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        }
+    }
+        
 }
 
 @media (max-width:991px){
@@ -466,6 +477,7 @@ section {
             }
         }
     }
+    
 }
 
 @media (max-width: 768px){
