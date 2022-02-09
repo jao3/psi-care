@@ -486,8 +486,8 @@ section {
 .footer .box-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[25rem];
-      grid-template-columns: repeat(25rem, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -566,6 +566,10 @@ section {
   .produtos .box-produtos {
     -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+  .footer .box-container {
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
 }
 

@@ -381,7 +381,7 @@ section {
 .footer{
     background-color: $primary;
     .box-container{
-        @include grid(25rem);
+        @include grid(3);
         h3{
             @include titleText(2.2rem);
             color: $white;
@@ -451,6 +451,11 @@ section {
     .produtos{
         .box-produtos{
             grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        }
+    }
+    .footer{
+        .box-container{
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         }
     }
         
